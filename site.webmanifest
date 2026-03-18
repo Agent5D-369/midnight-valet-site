@@ -1,0 +1,10 @@
+{
+  "name": "Midnight Valet",
+  "short_name": "Midnight Valet",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#0b0d10",
+  "description": "Premium convenience systems for qualified 21+ venues.",
+  "icons": []
+}
