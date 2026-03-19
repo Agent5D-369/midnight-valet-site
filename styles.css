@@ -640,8 +640,11 @@ button { font: inherit; }
   background: rgba(255,255,255,.04);
   color: var(--muted);
 }
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity .45s ease, transform .45s ease; }
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.reveal { opacity: 1; transform: none; }
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .45s ease, transform .45s ease; }
+.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
+.hero .reveal, .page-hero .reveal, .cta-panel.reveal { opacity: 1; transform: none; }
+.js .hero .reveal, .js .page-hero .reveal, .js .cta-panel.reveal { opacity: 1; transform: none; }
 
 @media (min-width: 760px) {
   .header-shell { padding: 18px 22px; }

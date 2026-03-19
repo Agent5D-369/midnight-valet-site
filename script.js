@@ -1,3 +1,4 @@
+document.querySelectorAll('.hero .reveal, .page-hero .reveal, .cta-panel.reveal').forEach(el => el.classList.add('is-visible'));
 const navToggle = document.querySelector('[data-nav-toggle]');
 const mobileNav = document.querySelector('[data-mobile-nav]');
 if (navToggle && mobileNav) {
@@ -26,7 +27,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('is-visible');
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.01, rootMargin: '0px 0px -8% 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
