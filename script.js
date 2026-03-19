@@ -23,13 +23,7 @@ document.querySelectorAll('.faq-item button').forEach(btn => {
   });
 });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('is-visible');
-  });
-}, { threshold: 0.01, rootMargin: '0px 0px -8% 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
 
 const current = location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('[data-nav-link]').forEach(link => {
