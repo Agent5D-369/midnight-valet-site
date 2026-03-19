@@ -37,3 +37,48 @@ document.querySelectorAll('[data-nav-link]').forEach(link => {
     link.classList.add('active');
   }
 });
+
+
+const waitlistForm = document.querySelector('[data-waitlist-form]');
+if (waitlistForm) {
+  const status = waitlistForm.querySelector('[data-form-status]');
+  waitlistForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const action = waitlistForm.getAttribute('action') || '';
+    if (!action.includes('formspree.io/f/') || action.includes('REPLACE_WITH_YOUR_FORM_ID')) {
+      if (status) {
+        status.textContent = 'Setup required: replace the placeholder Formspree endpoint in waitlist.html before publishing.';
+        status.classList.add('is-error');
+      }
+      return;
+    }
+    const formData = new FormData(waitlistForm);
+    try {
+      const res = await fetch(action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+      if (res.ok) {
+        waitlistForm.reset();
+        if (status) {
+          status.innerHTML = 'Success. You're on the waitlist. <a href="venue-pilot-scorecard.html">Open the scorecard now.</a>';
+          status.classList.remove('is-error');
+          status.classList.add('is-success');
+        }
+      } else {
+        const data = await res.json().catch(() => ({}));
+        const msg = data.errors?.map(err => err.message).join(' ') || 'Something went wrong. Please try again or email MidnightValetLLC@gmail.com.';
+        if (status) {
+          status.textContent = msg;
+          status.classList.add('is-error');
+        }
+      }
+    } catch (err) {
+      if (status) {
+        status.textContent = 'Connection error. Please try again or email MidnightValetLLC@gmail.com.';
+        status.classList.add('is-error');
+      }
+    }
+  });
+}

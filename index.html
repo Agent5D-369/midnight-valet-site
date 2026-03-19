@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="canonical" href="https://midnightvalet.com/">
   <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta property="og:image" content="https://midnightvalet.com/assets/midnight-valet-logo.png">
   <script type="application/ld+json">{
     "@context":"https://schema.org",
     "@type":"Organization",
@@ -30,13 +32,13 @@
   ]
 }</script>
 </head>
-<body>
+<body class="theme-home">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-shell">
       <a href="index.html" class="brand-lockup" aria-label="Midnight Valet home">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span><span class="brand-name">Midnight Valet</span><br><span class="brand-tag">Built for 21+ venues</span></span>
+        <span><span class="brand-name">Midnight Valet</span><br><span class="brand-tag">Premium convenience systems for 21+ venues</span></span>
       </a>
       <nav class="desktop-nav" aria-label="Primary">
         <a href="index.html" data-nav-link>Home</a>
@@ -44,6 +46,7 @@
         <a href="nightclubs.html" data-nav-link>Nightclubs</a>
         <a href="lounges.html" data-nav-link>Lounges</a>
         <a href="operators.html" data-nav-link>Operators</a>
+        <a href="waitlist.html" data-nav-link>Waitlist</a>
       </nav>
       <div class="header-actions">
         <a class="btn btn-primary hidden-mobile" href="#cta">Book a 15-Minute Operator Call</a>
@@ -58,6 +61,7 @@
       <a href="nightclubs.html" data-nav-link>Nightclubs</a>
       <a href="lounges.html" data-nav-link>Smoking Lounges</a>
       <a href="operators.html" data-nav-link>Multi-Location Operators</a>
+      <a href="waitlist.html" data-nav-link>Waitlist + Scorecard</a>
       <a href="#cta">Book a 15-Minute Operator Call</a>
     </nav>
   </header>
@@ -71,7 +75,7 @@
         <p>Midnight Valet helps qualified 21+ casinos, sportsbooks, nightclubs, and premium lounges add a fully managed on-site convenience pilot without adding staff burden, counter friction, or cheap-looking retail clutter.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#cta">Book a 15-Minute Operator Call</a>
-          <a class="btn btn-secondary" href="#offer">See If Your Venue Qualifies</a>
+          <a class="btn btn-secondary" href="waitlist.html">Get the Venue Pilot Scorecard</a>
         </div>
         <div class="micro-proof" aria-label="Key offer proof points">
           <div>Fully managed pilot</div>
@@ -83,26 +87,22 @@
       <div class="hero-visual reveal">
         <div class="glow" aria-hidden="true"></div>
         <div class="mock-stage">
-          <div class="machine" aria-label="Midnight Valet interface preview">
-            <div class="machine-top">
-              <span>Midnight Valet</span>
-              <span>21+ qualified venues</span>
-            </div>
-            <div class="machine-screen">
-              <span class="ui-chip">Premium convenience pilot</span>
-              <h2 style="font-family:var(--font-head);font-size:1.8rem;line-height:1;margin:16px 0 10px;">Built for high-dwell adult venues.</h2>
-              <p style="color:var(--muted);margin:0 0 12px;">Clear products. Fast payment. Clean design. No staff drag.</p>
-              <div class="ui-grid">
-                <div class="product-card"><strong>Venue-ready UI</strong><span>Fast, legible, premium presentation</span></div>
-                <div class="product-card"><strong>Managed service</strong><span>Built around pilot sell-through</span></div>
-                <div class="product-card"><strong>Operator reporting</strong><span>Simple monthly performance review</span></div>
-                <div class="product-card"><strong>Qualified environments</strong><span>Built around 21+ venue fit</span></div>
+          <div class="brand-stage" aria-label="Midnight Valet brand preview">
+            <img class="hero-logo" src="assets/midnight-valet-logo.png" alt="Midnight Valet logo">
+            <div class="brand-stage-copy">
+              <span class="ui-chip">Premium fit. Contained risk. Clear upside.</span>
+              <h2 class="hero-visual-head">Built for operators who want the revenue without the drag.</h2>
+              <p class="hero-visual-copy">A sharper way to test on-site adult convenience in the kind of room where guests already bring the demand.</p>
+              <div class="proof-stack">
+                <div class="proof-pill"><strong>For the venue</strong><span>More captured spend. No added payroll.</span></div>
+                <div class="proof-pill"><strong>For the guest</strong><span>Fast, discreet, premium on-site access.</span></div>
+                <div class="proof-pill"><strong>For the decision</strong><span>Structured 90-day pilot with clean evaluation.</span></div>
               </div>
               <div class="mock-cta">Request a Venue Fit Review</div>
             </div>
           </div>
         </div>
-        <p class="hero-caption">A premium convenience layer that feels like part of the venue, not a random wall machine.</p>
+        <p class="hero-caption">Designed to feel like a premium venue amenity, not a smoke-shop machine dropped into the room.</p>
       </div>
     </div>
   </section>
@@ -137,8 +137,8 @@
       <div class="offer-grid">
         <div>
           <span class="eyebrow">The Midnight Valet 90-Day Pilot</span>
-          <h2 style="font-family:var(--font-head);font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.02;letter-spacing:-.03em;">A premium convenience layer for 21+ venues.</h2>
-          <p style="color:var(--muted);max-width:42rem;">This is not a vague idea and it is not a machine-drop hustle. It is a structured, done-for-you pilot designed to help qualified venues test a new convenience revenue layer without taking on unnecessary complexity.</p>
+          <h2 style="font-family:var(--font-head);font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.02;letter-spacing:-.03em;">A low-friction way to test a new revenue layer in a serious 21+ venue.</h2>
+          <p style="color:var(--muted);max-width:42rem;">Midnight Valet is built for operators who want to test real guest demand, preserve the feel of the room, and evaluate upside without building a new internal retail burden.</p>
           <div class="offer-stack">
             <div class="price-chip">Venue fit review • placement strategy • launch plan • service rhythm • monthly review</div>
             <ul class="check-list">
@@ -154,9 +154,9 @@
           </div>
         </div>
         <div class="cards">
-          <article class="card"><h3>What operators want</h3><p>More captured spend per guest, less guest leakage, no added payroll, and a pilot that feels low-risk and operationally contained.</p></article>
-          <article class="card"><h3>Primary CTA</h3><p><strong>Book a 15-Minute Operator Call</strong><br><span style="color:var(--muted);">Simple. serious. low-friction.</span></p></article>
-          <article class="card"><h3>Why this converts</h3><p>It compresses the promise into something a decision-maker can say yes to quickly: clear upside, contained downside, and no staff drag.</p></article>
+          <article class="card"><h3>What you gain</h3><p>More captured spend per guest, less guest leakage, and a cleaner on-site experience without adding payroll or counter friction.</p></article>
+          <article class="card"><h3>Why serious operators engage</h3><p>The model is easy to evaluate: one short call, one clean fit review, and one clear path to a pilot if the venue deserves it.</p></article>
+          <article class="card"><h3>Why the pilot is easier to say yes to</h3><p>It puts the decision around real economics, low disruption, and whether the room can support premium on-site convenience without operational drag.</p></article>
         </div>
       </div>
     </div>
@@ -164,16 +164,36 @@
 
   <section class="section section-tight">
     <div class="container">
+      <div class="leadmagnet-panel reveal">
+        <div>
+          <span class="eyebrow">Not ready to book the call yet?</span>
+          <h2>Join the Midnight Valet priority waitlist and get the 21+ Venue Pilot Scorecard.</h2>
+          <p>Get the exact screening checklist we use to judge venue fit, placement strength, guest-demand quality, and rollout readiness — then decide if a pilot is worth the conversation.</p>
+          <ul class="check-list">
+            <li>7-factor venue fit scorecard</li>
+            <li>Pilot-readiness checklist for operators</li>
+            <li>Priority updates as new pilot windows open</li>
+          </ul>
+        </div>
+        <div class="leadmagnet-actions">
+          <a class="btn btn-primary" href="waitlist.html">Get the Scorecard + Join the Waitlist</a>
+          <p class="form-note">Best for operators who are interested but not ready for a live call yet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">    <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Built for qualified 21+ environments</span>
         <h2>Choose the path that matches your venue.</h2>
         <p>Midnight Valet is designed to fit premium adult venues that care about guest continuity, operational simplicity, and visual standards.</p>
       </div>
       <div class="segment-links">
-        <a class="tile reveal" href="casinos-sportsbooks.html"><h3>Casinos + Sportsbooks</h3><p>Long dwell time. repeated spending cycles. guests who do not want to leave the property.</p><span class="cta-link">Explore Casino Pilots →</span></a>
+        <a class="tile reveal" href="casinos-sportsbooks.html"><h3>Casinos + Sportsbooks</h3><p>Long dwell time, repeated spending cycles, and guests who do not want to leave the property.</p><span class="cta-link">Explore Casino Pilots →</span></a>
         <a class="tile reveal" href="nightclubs.html"><h3>Nightclubs + Late-Night Venues</h3><p>Fast-paced environments where guest momentum matters and convenience friction breaks the flow.</p><span class="cta-link">Explore Nightlife Pilots →</span></a>
         <a class="tile reveal" href="lounges.html"><h3>Premium Smoking Lounges</h3><p>Curated adult environments where design, atmosphere, and discreet access all matter.</p><span class="cta-link">Explore Lounge Pilots →</span></a>
-        <a class="tile reveal" href="operators.html"><h3>Multi-Location Operators</h3><p>One clean pilot. clear reporting. a path to rollout without chaos.</p><span class="cta-link">Explore Multi-Location Pilots →</span></a>
+        <a class="tile reveal" href="operators.html"><h3>Multi-Location Operators</h3><p>One clean pilot, clear reporting, and a path to rollout without chaos.</p><span class="cta-link">Explore Multi-Location Pilots →</span></a>
       </div>
     </div>
   </section>
@@ -194,7 +214,7 @@
     <div class="container">
       <div class="cta-panel reveal">
         <div>
-          <span class="eyebrow">Final CTA</span>
+          <span class="eyebrow">For qualified 21+ properties</span>
           <h2>See If Midnight Valet Fits Your Venue</h2>
           <p>If you operate a qualified 21+ venue and want to explore a premium, low-friction pilot, let’s talk.</p>
         </div>
@@ -217,6 +237,7 @@
         <ul>
           <li><a href="casinos-sportsbooks.html">Casinos + Sportsbooks</a></li>
           <li><a href="nightclubs.html">Nightclubs</a></li>
+          <li><a href="waitlist.html">Waitlist + Scorecard</a></li>
         </ul>
       </div>
       <div>
@@ -227,7 +248,7 @@
       </div>
     </div>
   </footer>
-  <div class="sticky-cta"><a class="btn btn-primary" href="#cta">Book Operator Call</a><a class="btn btn-secondary" href="mailto:MidnightValetLLC@gmail.com?subject=Venue%20Fit%20Review">Venue Fit Review</a></div>
+  <div class="sticky-cta"><a class="btn btn-primary" href="#cta">Book Operator Call</a><a class="btn btn-secondary" href="mailto:MidnightValetLLC@gmail.com?subject=Qualified%20Venue%20Review">Qualify Your Venue</a></div>
   <script src="script.js"></script>
 </body>
 </html>

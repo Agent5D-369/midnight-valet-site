@@ -25,13 +25,18 @@ body {
   margin: 0;
   font-family: var(--font-body);
   background:
-    radial-gradient(circle at top left, rgba(185,141,87,.16), transparent 34%),
-    radial-gradient(circle at top right, rgba(197,111,73,.1), transparent 24%),
+    radial-gradient(circle at top left, var(--theme-glow-1, rgba(185,141,87,.16)), transparent 34%),
+    radial-gradient(circle at top right, var(--theme-glow-2, rgba(197,111,73,.1)), transparent 24%),
     linear-gradient(180deg, #0a0c10 0%, #0f1218 52%, #0b0d10 100%);
   color: var(--text);
   line-height: 1.55;
   text-rendering: optimizeLegibility;
 }
+.theme-home { --theme-glow-1: rgba(185,141,87,.16); --theme-glow-2: rgba(197,111,73,.10); }
+.theme-casino { --theme-glow-1: rgba(185,141,87,.22); --theme-glow-2: rgba(106,39,17,.14); }
+.theme-nightlife { --theme-glow-1: rgba(132,66,135,.16); --theme-glow-2: rgba(197,111,73,.18); }
+.theme-lounge { --theme-glow-1: rgba(185,141,87,.18); --theme-glow-2: rgba(93,126,96,.12); }
+.theme-operators { --theme-glow-1: rgba(122,150,186,.16); --theme-glow-2: rgba(185,141,87,.12); }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
@@ -74,20 +79,13 @@ button { font: inherit; }
   gap: 12px;
 }
 .brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  background: linear-gradient(160deg, rgba(185,141,87,.95), rgba(100,64,37,.95));
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.25), var(--shadow);
-  position: relative;
+  width: 56px;
+  height: 56px;
+  background: url('assets/midnight-valet-crest.png') center/contain no-repeat;
+  filter: drop-shadow(0 12px 26px rgba(185,141,87,.22));
+  flex: 0 0 56px;
 }
-.brand-mark::before {
-  content: "";
-  position: absolute;
-  inset: 11px;
-  border-radius: 10px 3px 10px 3px;
-  border: 2px solid rgba(255,255,255,.78);
-}
+.brand-mark::before { display:none; }
 .brand-name {
   font-family: var(--font-head);
   font-size: 1rem;
@@ -98,6 +96,46 @@ button { font: inherit; }
   color: var(--muted);
   font-size: .8rem;
 }
+.hero-logo {
+  width: min(100%, 380px);
+  margin-inline: auto;
+  filter: drop-shadow(0 24px 44px rgba(185,141,87,.20));
+}
+.brand-stage {
+  width: min(100%, 430px);
+  border-radius: 34px;
+  border: 1px solid rgba(255,255,255,.08);
+  background:
+    radial-gradient(circle at top center, rgba(185,141,87,.18), transparent 26%),
+    linear-gradient(180deg, rgba(22,26,33,.96), rgba(11,13,17,.98));
+  padding: 24px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.42);
+}
+.brand-stage-copy { margin-top: 12px; }
+.hero-visual-head {
+  font-family: var(--font-head);
+  font-size: 1.65rem;
+  line-height: 1.02;
+  margin: 16px 0 10px;
+  letter-spacing: -.03em;
+}
+.hero-visual-copy {
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.proof-stack {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0;
+}
+.proof-pill {
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(255,255,255,.04);
+}
+.proof-pill strong { display:block; margin-bottom: 4px; }
+.proof-pill span { color: var(--muted); font-size:.92rem; }
 .header-actions {
   display: flex;
   align-items: center;
@@ -195,13 +233,30 @@ button { font: inherit; }
   gap: 22px;
 }
 .hero-copy,
-.hero-visual {
+.hero-visual,
+.page-hero-shell > .reveal,
+.page-hero-shell > .case-box {
   background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.03));
   border: 1px solid rgba(255,255,255,.07);
   border-radius: 30px;
   padding: 22px;
   box-shadow: var(--shadow);
 }
+.page-hero-shell > .reveal {
+  position: relative;
+  overflow: hidden;
+}
+.page-hero-shell > .reveal::after {
+  content:"";
+  position:absolute;
+  inset:auto -12% -40px auto;
+  width:220px; height:220px;
+  background: radial-gradient(circle, rgba(185,141,87,.16), transparent 68%);
+  pointer-events:none;
+}
+.theme-nightlife .page-hero-shell > .reveal::after { background: radial-gradient(circle, rgba(132,66,135,.20), transparent 68%); }
+.theme-lounge .page-hero-shell > .reveal::after { background: radial-gradient(circle, rgba(93,126,96,.18), transparent 68%); }
+.theme-operators .page-hero-shell > .reveal::after { background: radial-gradient(circle, rgba(122,150,186,.18), transparent 68%); }
 .hero-copy h1,
 .page-hero h1 {
   font-family: var(--font-head);
@@ -645,4 +700,113 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal, .btn, .faq-item .faq-answer { transition: none; }
+}
+
+
+.leadmagnet-panel,
+.form-shell,
+.scorecard-shell {
+  border: 1px solid rgba(185,141,87,.18);
+  border-radius: 28px;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.035));
+  box-shadow: var(--shadow);
+}
+.leadmagnet-panel,
+.form-shell {
+  display: grid;
+  gap: 18px;
+}
+.leadmagnet-actions { display: grid; gap: 12px; align-content: center; }
+.field-grid { display: grid; gap: 14px; }
+.waitlist-form { display: grid; gap: 14px; }
+.waitlist-form label { display: grid; gap: 8px; color: var(--text); font-weight: 600; }
+.waitlist-form input,
+.waitlist-form select,
+.waitlist-form textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  padding: 14px 14px;
+  font: inherit;
+}
+.waitlist-form textarea { min-height: 132px; resize: vertical; }
+.waitlist-form input:focus,
+.waitlist-form select:focus,
+.waitlist-form textarea:focus {
+  outline: 2px solid rgba(185,141,87,.3);
+  border-color: rgba(185,141,87,.42);
+}
+.waitlist-form option { color: #111; }
+.checkbox-row { grid-template-columns: 20px 1fr; align-items: start; }
+.checkbox-row input { margin-top: 2px; }
+.form-actions { display: grid; gap: 10px; }
+.form-note,
+.form-status { color: var(--muted); }
+.form-status.is-success { color: var(--success); }
+.form-status.is-error { color: #ffb2a4; }
+.form-status a { color: var(--gold-soft); text-decoration: underline; }
+.hp-field { position: absolute !important; left: -9999px !important; opacity: 0 !important; pointer-events: none !important; }
+@media (min-width: 760px) {
+  .leadmagnet-panel,
+  .form-shell { grid-template-columns: 1.05fr .95fr; align-items: start; }
+  .field-grid.two { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+
+.theme-casino .eyebrow, .theme-casino .ui-chip { color: #e5c18f; background: rgba(185,141,87,.12); border-color: rgba(185,141,87,.28); }
+.theme-nightlife .eyebrow, .theme-nightlife .ui-chip { color: #d8b0e5; background: rgba(132,66,135,.12); border-color: rgba(132,66,135,.28); }
+.theme-lounge .eyebrow, .theme-lounge .ui-chip { color: #d2c095; background: rgba(110,133,93,.12); border-color: rgba(110,133,93,.28); }
+.theme-operators .eyebrow, .theme-operators .ui-chip { color: #b8d2eb; background: rgba(122,150,186,.12); border-color: rgba(122,150,186,.28); }
+
+.theme-casino .btn-primary { background: linear-gradient(135deg, #f0c892, #b98d57); }
+.theme-nightlife .btn-primary { background: linear-gradient(135deg, #ddb4ef, #9d5cc1); color:#120d16; }
+.theme-lounge .btn-primary { background: linear-gradient(135deg, #e4cf98, #8f7a4b); color:#16140f; }
+.theme-operators .btn-primary { background: linear-gradient(135deg, #c2d6eb, #7ea2c5); color:#101720; }
+
+.tile:hover, .card:hover, .kicker:hover, .case-box:hover {
+  transform: translateY(-2px);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  border-color: rgba(185,141,87,.22);
+  background: rgba(255,255,255,.055);
+}
+.theme-nightlife .tile:hover, .theme-nightlife .card:hover, .theme-nightlife .kicker:hover, .theme-nightlife .case-box:hover {
+  border-color: rgba(132,66,135,.28);
+}
+.theme-operators .tile:hover, .theme-operators .card:hover, .theme-operators .kicker:hover, .theme-operators .case-box:hover {
+  border-color: rgba(122,150,186,.28);
+}
+.case-box {
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.035));
+}
+.case-box h3 { font-size: 1.1rem; }
+.hero-caption { text-align:center; }
+@media (min-width: 760px) {
+  .brand-stage { padding: 28px; }
+  .hero-visual-head { font-size: 1.85rem; }
+}
+
+.case-box {
+  position: relative;
+  overflow: hidden;
+}
+.case-box::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 120px;
+  height: 120px;
+  background: url('assets/midnight-valet-crest.png') center/contain no-repeat;
+  opacity: .08;
+  pointer-events: none;
+}
+.page-hero .case-box,
+.page-hero .reveal:first-child {
+  min-height: 100%;
+}
+.page-hero h1 {
+  text-wrap: balance;
 }
