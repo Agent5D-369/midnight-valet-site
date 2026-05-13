@@ -852,10 +852,6 @@ button { font: inherit; }
   color: var(--mv-text-dark);
 }
 .mv-refresh .mv-header { background: rgba(12, 15, 22, .82); }
-.mv-refresh .brand-mark {
-  background-image: url('assets/midnight-valet-pin-logo.svg');
-  filter: drop-shadow(0 12px 24px rgba(255,203,5,.22));
-}
 .mv-refresh .brand-tag { color: rgba(245, 241, 232, .74); }
 .mv-refresh .desktop-nav a { color: rgba(245, 241, 232, .76); }
 .mv-refresh .desktop-nav a:hover,
