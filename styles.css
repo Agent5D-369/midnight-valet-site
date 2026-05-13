@@ -827,3 +827,501 @@ button { font: inherit; }
   .hero{padding:34px 0 24px;}
   .hero-copy,.hero-visual{padding:26px;}
 }
+
+/* Midnight Valet specialty vending refresh */
+.mv-refresh {
+  --mv-navy: #10131a;
+  --mv-blue: #2a75bb;
+  --mv-blue-deep: #173f86;
+  --mv-yellow: #ffcb05;
+  --mv-red: #e53935;
+  --mv-text-dark: #172033;
+  --mv-muted-dark: #5a6478;
+}
+.theme-specialty {
+  background:
+    radial-gradient(circle at 82% 12%, rgba(255, 203, 5, .18), transparent 24%),
+    radial-gradient(circle at 14% 18%, rgba(42, 117, 187, .22), transparent 28%),
+    linear-gradient(180deg, #10131a 0%, #151927 46%, #0b0d10 100%);
+}
+.theme-card-vending {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 203, 5, .34), transparent 24%),
+    radial-gradient(circle at 84% 8%, rgba(229, 57, 53, .18), transparent 20%),
+    linear-gradient(180deg, #f8fbff 0%, #fff7d7 38%, #eef5ff 76%, #10131a 100%);
+  color: var(--mv-text-dark);
+}
+.mv-refresh .mv-header { background: rgba(12, 15, 22, .82); }
+.mv-refresh .brand-tag { color: rgba(245, 241, 232, .74); }
+.mv-refresh .desktop-nav a { color: rgba(245, 241, 232, .76); }
+.mv-refresh .desktop-nav a:hover,
+.mv-refresh .desktop-nav a:focus-visible,
+.mv-refresh .desktop-nav a.active {
+  color: #fff;
+  background: rgba(255,255,255,.08);
+}
+.card-header .desktop-nav a,
+.card-header .brand-name { color: #fff; }
+.mv-refresh .btn-primary {
+  background: linear-gradient(135deg, var(--mv-yellow), #ffd94d);
+  color: #172033;
+  box-shadow: 0 14px 34px rgba(255, 203, 5, .24);
+}
+.mv-refresh .btn-secondary {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.18);
+}
+.theme-card-vending .btn-secondary {
+  color: var(--mv-blue-deep);
+  background: #fff;
+  border-color: rgba(42, 117, 187, .22);
+}
+.mv-hero,
+.card-hero,
+.upload-hero {
+  padding: 54px 0 48px;
+  overflow: hidden;
+}
+.mv-hero-grid,
+.card-hero-grid,
+.upload-grid,
+.mv-pokemon-grid,
+.showcase-grid,
+.upload-form-grid,
+.mv-split {
+  display: grid;
+  gap: 24px;
+}
+.mv-hero-copy,
+.card-hero-grid > .reveal,
+.upload-grid > .reveal:first-child {
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+  box-shadow: var(--shadow);
+}
+.card-hero-grid > .reveal,
+.upload-grid > .reveal:first-child {
+  background: rgba(255,255,255,.72);
+  border-color: rgba(42,117,187,.14);
+  color: var(--mv-text-dark);
+}
+.mv-hero-copy h1,
+.card-hero h1,
+.upload-hero h1 {
+  margin: 0 0 18px;
+  font-family: "Fredoka", var(--font-head);
+  font-size: clamp(3rem, 10vw, 6.8rem);
+  line-height: .88;
+  letter-spacing: 0;
+}
+.mv-hero-copy p,
+.card-hero p,
+.upload-hero p {
+  max-width: 680px;
+  color: rgba(245, 241, 232, .82);
+  font-size: clamp(1.02rem, 2vw, 1.25rem);
+}
+.card-hero p,
+.upload-hero p,
+.theme-card-vending .section-head p,
+.theme-card-vending .form-note { color: var(--mv-muted-dark); }
+.mv-machine-stage,
+.card-world {
+  min-height: 520px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.machine-photo {
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  border: 7px solid #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0,0,0,.42);
+  background: #fff;
+}
+.machine-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-machine-photo {
+  width: min(390px, 78vw);
+  aspect-ratio: 3 / 4.2;
+  transform: rotate(-2deg);
+}
+.card-page-machine {
+  width: min(410px, 80vw);
+  aspect-ratio: 3 / 4.15;
+}
+.gallery-machine-photo {
+  width: min(350px, 74vw);
+  aspect-ratio: 3 / 4.12;
+  margin-inline: auto;
+}
+.mv-card-burst,
+.card-pack,
+.gallery-card {
+  border: 4px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 18px 30px rgba(23,32,51,.22);
+}
+.mv-card-burst {
+  position: absolute;
+  width: 130px;
+  height: 180px;
+  background: linear-gradient(135deg, #ffef8a, #ffcb05 40%, #2a75bb);
+}
+.mv-card-burst-a {
+  top: 38px;
+  left: 2%;
+  transform: rotate(-16deg);
+}
+.mv-card-burst-b {
+  right: 0;
+  bottom: 76px;
+  background: linear-gradient(135deg, #fff, #75b9ff 42%, #e53935);
+  transform: rotate(14deg);
+}
+.mv-qr-card,
+.qr-showcase,
+.upload-ticket {
+  border-radius: 8px;
+  border: 1px solid rgba(23,32,51,.12);
+  background: #fff;
+  color: var(--mv-text-dark);
+  box-shadow: 0 20px 42px rgba(23,32,51,.18);
+}
+.mv-qr-card {
+  position: absolute;
+  right: 4%;
+  top: 34px;
+  width: 170px;
+  padding: 12px;
+  z-index: 3;
+  transform: rotate(5deg);
+}
+.mv-qr-card img,
+.qr-showcase img {
+  width: 100%;
+  border-radius: 4px;
+}
+.mv-qr-card strong,
+.qr-showcase strong {
+  display: block;
+  margin-top: 10px;
+  font-family: "Fredoka", var(--font-head);
+  line-height: 1.05;
+}
+.mv-proof-panel,
+.mv-host-panel {
+  padding: 28px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--mv-text-dark);
+  box-shadow: 0 18px 44px rgba(0,0,0,.16);
+}
+.mv-proof-panel p,
+.mv-host-panel p { color: var(--mv-muted-dark); }
+.mv-lane-grid {
+  display: grid;
+  gap: 16px;
+}
+.mv-lane-card {
+  min-height: 320px;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.1);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+.mv-lane-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -28px -70px auto;
+  width: 210px;
+  height: 290px;
+  border: 7px solid rgba(255,255,255,.62);
+  border-radius: 8px;
+  transform: rotate(17deg);
+}
+.lane-pokemon {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255,255,255,.36), transparent 20%),
+    linear-gradient(135deg, var(--mv-blue), var(--mv-yellow));
+  color: #172033;
+}
+.lane-plus { background: linear-gradient(135deg, #151821, #533063 48%, #b98d57); }
+.lane-future { background: linear-gradient(135deg, #152130, #315b72 48%, #4fd28c); }
+.lane-status {
+  width: fit-content;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.2);
+  font-weight: 800;
+  font-size: .8rem;
+}
+.mv-lane-card h3 {
+  margin: 52px 0 10px;
+  max-width: 560px;
+  font-family: "Fredoka", var(--font-head);
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  line-height: .92;
+}
+.mv-lane-card p {
+  max-width: 560px;
+  font-weight: 600;
+}
+.mv-lane-card .cta-link {
+  position: relative;
+  z-index: 1;
+  font-weight: 900;
+}
+.mv-pokemon-band {
+  color: var(--mv-text-dark);
+  background:
+    linear-gradient(90deg, rgba(42,117,187,.1) 1px, transparent 1px),
+    linear-gradient(180deg, #fffdf6, #eef5ff);
+  background-size: 46px 46px, auto;
+}
+.mv-pokemon-band h2,
+.card-hero h1,
+.upload-hero h1,
+.theme-card-vending h2 {
+  font-family: "Fredoka", var(--font-head);
+  letter-spacing: 0;
+}
+.mv-card-gallery {
+  min-height: 440px;
+  position: relative;
+}
+.gallery-card {
+  position: absolute;
+  right: 2%;
+  bottom: 18px;
+  width: 160px;
+  aspect-ratio: 2.5 / 3.5;
+  display: grid;
+  align-items: end;
+  padding: 16px;
+  color: #172033;
+  font-weight: 900;
+  font-family: "Fredoka", var(--font-head);
+  background: linear-gradient(135deg, #ffcb05, #fff4ad, #2a75bb);
+  transform: rotate(10deg);
+  z-index: 3;
+}
+.mv-host-panel {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+}
+.card-hero,
+.upload-hero {
+  background:
+    radial-gradient(circle at 72% 12%, rgba(255,203,5,.45), transparent 22%),
+    linear-gradient(180deg, #eef6ff, #fff7d7);
+}
+.card-pack {
+  position: absolute;
+  width: 148px;
+  height: 210px;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  text-align: center;
+  font-family: "Fredoka", var(--font-head);
+  font-weight: 800;
+  color: #172033;
+}
+.pack-a {
+  left: 3%;
+  top: 26px;
+  background: linear-gradient(135deg, #ffcb05, #fff4a6);
+  transform: rotate(-14deg);
+}
+.pack-b {
+  right: 0;
+  top: 74px;
+  color: #fff;
+  background: linear-gradient(135deg, #2a75bb, #173f86);
+  transform: rotate(12deg);
+}
+.pack-c {
+  left: 19%;
+  bottom: 16px;
+  background: linear-gradient(135deg, #fff, #ff8a86);
+  transform: rotate(8deg);
+}
+.collector-steps {
+  display: grid;
+  gap: 14px;
+}
+.collector-step,
+.submission-guide,
+.mv-form {
+  padding: 22px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.84);
+  border: 1px solid rgba(42,117,187,.16);
+  box-shadow: 0 14px 34px rgba(23,32,51,.1);
+}
+.collector-step strong {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--mv-yellow);
+  color: var(--mv-blue-deep);
+  font-family: "Fredoka", var(--font-head);
+  font-size: 1.4rem;
+}
+.collector-step h3 {
+  margin: 16px 0 8px;
+  color: var(--mv-blue-deep);
+}
+.card-showcase {
+  background: var(--mv-blue);
+  color: #fff;
+}
+.card-showcase p { color: rgba(255,255,255,.84); }
+.qr-showcase {
+  max-width: 320px;
+  padding: 22px;
+  margin-inline: auto;
+  text-align: center;
+}
+.qr-showcase span {
+  display: block;
+  color: var(--mv-muted-dark);
+  font-size: .9rem;
+  overflow-wrap: anywhere;
+}
+.card-host { border: 5px solid var(--mv-yellow); }
+.upload-ticket {
+  align-self: center;
+  padding: 24px;
+}
+.upload-ticket strong {
+  display: block;
+  font-family: "Fredoka", var(--font-head);
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--mv-blue-deep);
+}
+.upload-ticket span {
+  display: block;
+  margin-top: 10px;
+  color: var(--mv-muted-dark);
+}
+.mv-form {
+  display: grid;
+  gap: 16px;
+}
+.mv-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--mv-text-dark);
+  font-weight: 800;
+}
+.mv-form input,
+.mv-form textarea {
+  width: 100%;
+  border: 1px solid rgba(42,117,187,.24);
+  border-radius: 8px;
+  padding: 13px 14px;
+  font: inherit;
+  color: var(--mv-text-dark);
+  background: #fff;
+}
+.mv-check {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  font-weight: 600 !important;
+}
+.mv-check input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+}
+.submission-guide h2 {
+  margin-top: 0;
+  color: var(--mv-blue-deep);
+}
+.mini-testimonials {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+.mini-testimonials article {
+  padding: 16px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255,203,5,.24), rgba(42,117,187,.12));
+}
+.mini-testimonials strong,
+.mini-testimonials span { display: block; }
+.mini-testimonials span { color: var(--mv-muted-dark); }
+
+@media (min-width: 760px) {
+  .mv-refresh .sticky-cta { display: none; }
+}
+
+@media (min-width: 760px) {
+  .mv-hero-grid,
+  .card-hero-grid,
+  .upload-grid,
+  .mv-pokemon-grid,
+  .showcase-grid,
+  .upload-form-grid,
+  .mv-split {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, .78fr);
+    align-items: center;
+  }
+  .mv-lane-grid { grid-template-columns: 1.2fr .9fr .9fr; }
+  .collector-steps { grid-template-columns: repeat(4, 1fr); }
+  .mv-host-panel { grid-template-columns: 1fr auto; }
+}
+
+@media (max-width: 700px) {
+  .mv-hero-copy h1,
+  .card-hero h1,
+  .upload-hero h1 {
+    font-size: clamp(3.2rem, 18vw, 4.5rem);
+  }
+  .mv-machine-stage,
+  .card-world { min-height: 470px; }
+  .mv-qr-card {
+    right: 0;
+    top: auto;
+    bottom: 8px;
+    width: 140px;
+  }
+  .mv-card-burst {
+    width: 96px;
+    height: 136px;
+  }
+  .machine-photo { border-width: 5px; }
+  .hero-machine-photo,
+  .card-page-machine { width: min(290px, 82vw); }
+  .mv-lane-card { min-height: 280px; }
+  .gallery-card { width: 130px; }
+  .mv-card-gallery { min-height: 370px; }
+  .card-pack {
+    width: 102px;
+    height: 145px;
+    font-size: .82rem;
+  }
+  .sticky-cta .btn {
+    padding-inline: 12px;
+    font-size: .88rem;
+  }
+}
