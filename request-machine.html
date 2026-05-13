@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add("js");</script>
+  <title>Request a Machine | Midnight Valet</title>
+  <meta name="description" content="Request a Midnight Valet specialty vending machine for your venue. Midnight Valet owns, places, stocks, services, and pays approved venues a revenue share.">
+  <meta name="theme-color" content="#10131a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://midnightvalet.com/request-machine.html">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body class="mv-refresh theme-specialty">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header mv-header">
+    <div class="header-shell">
+      <a href="index.html" class="brand-lockup" aria-label="Midnight Valet home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span><span class="brand-name">Midnight Valet</span><br><span class="brand-tag">Venue partnership request</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="index.html" data-nav-link>Home</a>
+        <a href="pokemon-card-vending.html" data-nav-link>Pokemon Card Vending</a>
+        <a href="request-machine.html" data-nav-link>Request a Machine</a>
+        <a href="upload-pull.html" data-nav-link>Upload a Pull</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary hidden-mobile" href="#request-form">Start Request</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="Mobile" data-mobile-nav>
+      <a href="index.html" data-nav-link>Home</a>
+      <a href="pokemon-card-vending.html" data-nav-link>Pokemon Card Vending</a>
+      <a href="request-machine.html" data-nav-link>Request a Machine</a>
+      <a href="upload-pull.html" data-nav-link>Upload a Pull</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="request-hero">
+      <div class="container request-grid">
+        <div class="reveal">
+          <h1>Host the machine. We handle the rest.</h1>
+          <p>Midnight Valet partners with approved venues by placing, stocking, servicing, and maintaining the machine. Your venue provides the right footprint and traffic; Midnight Valet provides the vending system and revenue-share structure.</p>
+        </div>
+        <div class="partnership-card reveal">
+          <strong>Partnership model</strong>
+          <ul>
+            <li>No machine purchase required from the venue</li>
+            <li>Midnight Valet owns and services the equipment</li>
+            <li>Approved venues receive revenue share</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="request-form">
+      <div class="container upload-form-grid">
+        <form class="mv-form reveal" action="https://formspree.io/f/xzdowreg" method="post">
+          <input type="hidden" name="form_type" value="Request a Machine">
+          <input type="hidden" name="_subject" value="Midnight Valet Machine Request">
+          <div class="form-intro">
+            <h2>Request a Machine</h2>
+            <p>Share enough detail for a venue-fit review. The strongest locations have steady traffic, visible placement options, and customers who would notice a collectible vending experience.</p>
+          </div>
+          <label>
+            Contact name
+            <input name="contact_name" type="text" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            Phone
+            <input name="phone" type="tel" autocomplete="tel">
+          </label>
+          <label>
+            Venue name
+            <input name="venue_name" type="text" required>
+          </label>
+          <label>
+            Venue city and state
+            <input name="venue_location" type="text" required>
+          </label>
+          <label>
+            Venue type
+            <select name="venue_type" required>
+              <option value="">Choose one</option>
+              <option>Restaurant or cafe</option>
+              <option>Arcade or family entertainment</option>
+              <option>Card shop or hobby store</option>
+              <option>Bowling alley or activity venue</option>
+              <option>Convenience or retail location</option>
+              <option>21+ venue</option>
+              <option>Other specialty venue</option>
+            </select>
+          </label>
+          <label>
+            Interested vending lane
+            <select name="interested_lane" required>
+              <option value="">Choose one</option>
+              <option>Pokemon-inspired card vending</option>
+              <option>21+ vending lane</option>
+              <option>Other specialty vending</option>
+            </select>
+          </label>
+          <label>
+            Estimated daily customer traffic
+            <input name="estimated_daily_traffic" type="text" placeholder="Example: 150-250 customers per day">
+          </label>
+          <label>
+            Where could the machine go?
+            <textarea name="placement_notes" rows="4" placeholder="Describe the visible, safe, indoor area where customers would see the machine."></textarea>
+          </label>
+          <label>
+            Why would this fit your audience?
+            <textarea name="audience_fit" rows="4" placeholder="Tell us about families, collectors, repeat customers, waiting areas, events, or other demand signals."></textarea>
+          </label>
+          <label class="mv-check">
+            <input name="partnership_understanding" type="checkbox" required>
+            <span>I understand this is a partnership request. Midnight Valet reviews fit before approving placement, servicing, and revenue-share terms.</span>
+          </label>
+          <label class="mv-check">
+            <input name="privacy_terms" type="checkbox" required>
+            <span>I agree to the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms</a>.</span>
+          </label>
+          <button class="btn btn-primary" type="submit">Submit Machine Request</button>
+        </form>
+
+        <aside class="submission-guide reveal">
+          <h2>What happens next</h2>
+          <ul class="check-list">
+            <li>Midnight Valet reviews your venue fit</li>
+            <li>We discuss placement and customer traffic</li>
+            <li>Approved locations receive a partnership plan</li>
+            <li>Midnight Valet handles setup, service, and restocking</li>
+          </ul>
+          <div class="mini-testimonials">
+            <article><strong>Best-fit venues</strong><span>Visible indoor placement, steady traffic, and customers with time to notice the machine.</span></article>
+            <article><strong>Revenue-share path</strong><span>Approved venues can earn without buying or servicing the machine.</span></article>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p>Midnight Valet LLC places specialty vending machines that help venues turn unused space into spare revenue.</p>
+        <p><a href="mailto:MidnightValetLLC@gmail.com">MidnightValetLLC@gmail.com</a></p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="pokemon-card-vending.html">Pokemon Card Vending</a></li>
+          <li><a href="upload-pull.html">Upload a Pull</a></li>
+          <li><a href="official-rules.html">Official Rules</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

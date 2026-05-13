@@ -28,7 +28,7 @@
         <a href="upload-pull.html" data-nav-link>Upload a Pull</a>
       </nav>
       <div class="header-actions">
-        <a class="btn btn-primary hidden-mobile" href="mailto:MidnightValetLLC@gmail.com?subject=Card%20Pull%20Upload">Email a Pull</a>
+        <a class="btn btn-primary hidden-mobile" href="#upload-form">Upload a Pull</a>
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -46,18 +46,24 @@
       <div class="container upload-grid">
         <div class="reveal">
           <h1>Show us your favorite pull.</h1>
-          <p>Upload a treasured card find from a Midnight Valet machine. Approved submissions may be featured as collector testimonials and included in future monthly showcase opportunities.</p>
+          <p>Upload a treasured card find from a Midnight Valet machine. Approved submissions may be featured as collector testimonials and entered into the monthly drawing when eligible.</p>
         </div>
         <div class="upload-ticket reveal">
-          <strong>Future showcase path</strong>
-          <span>Pull photo + short story + venue = social proof for the machine and a reason to check back.</span>
+          <strong>Monthly spotlight path</strong>
+          <span>Pull photo + short story + venue = collector proof, local bragging rights, and a no-purchase drawing entry path.</span>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="upload-form">
       <div class="container upload-form-grid">
-        <form class="mv-form reveal" action="mailto:MidnightValetLLC@gmail.com" method="post" enctype="text/plain">
+        <form class="mv-form reveal" action="https://formspree.io/f/mgodqkkn" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="form_type" value="Upload Your Pull">
+          <input type="hidden" name="_subject" value="Midnight Valet Upload Your Pull Submission">
+          <div class="form-intro">
+            <h2>Upload Your Pull</h2>
+            <p>Ask a parent or guardian before uploading. Take a clear photo of the card, keep faces and school names out of the picture, and tell us what made the pull exciting.</p>
+          </div>
           <label>
             Your name
             <input name="name" type="text" autocomplete="name" required>
@@ -78,12 +84,28 @@
             Tell us the story
             <textarea name="story" rows="5" placeholder="Why is this pull special?"></textarea>
           </label>
+          <label>
+            Upload a card image
+            <input name="card_image" type="file" accept="image/*" required>
+          </label>
+          <label>
+            Drawing entry choice
+            <select name="drawing_entry" required>
+              <option value="">Choose one</option>
+              <option value="Enter me if eligible">Enter me in the monthly drawing if eligible</option>
+              <option value="Feature only">Feature/testimonial only, no drawing entry</option>
+            </select>
+          </label>
           <label class="mv-check">
             <input name="feature_permission" type="checkbox" required>
             <span>I give Midnight Valet permission to review and potentially feature my submission as a testimonial or showcase entry.</span>
           </label>
-          <button class="btn btn-primary" type="submit">Send Pull Details</button>
-          <p class="form-note">This lightweight form opens your email client. For card photos, attach the image to the email before sending. A hosted upload form can replace this when the official submission backend is ready.</p>
+          <label class="mv-check">
+            <input name="rules_acknowledged" type="checkbox" required>
+            <span>I have read and agree to the <a href="official-rules.html">Official Rules</a>, <a href="privacy.html">Privacy Policy</a>, and <a href="terms.html">Terms</a>.</span>
+          </label>
+          <button class="btn btn-primary" type="submit">Submit Pull</button>
+          <p class="form-note">No purchase is required to enter the monthly drawing. You can also enter by email as described in the Official Rules.</p>
         </form>
 
         <aside class="submission-guide reveal">
@@ -93,10 +115,11 @@
             <li>The machine or venue where you found it</li>
             <li>Your short collector story</li>
             <li>Permission to feature the pull</li>
+            <li>Acknowledgement of the drawing rules</li>
           </ul>
           <div class="mini-testimonials">
-            <article><strong>Featured Hit</strong><span>Customer-submitted pulls become the testimonial wall.</span></article>
-            <article><strong>Monthly Showcase</strong><span>Giveaway language can activate after rules are finalized.</span></article>
+            <article><strong>"Best surprise of the week."</strong><span>Sample parent testimonial for a featured kid-friendly pull.</span></article>
+            <article><strong>"I scanned because I wanted to see other hits."</strong><span>Sample collector testimonial for the upload loop.</span></article>
           </div>
         </aside>
       </div>
@@ -117,7 +140,8 @@
       </div>
       <div>
         <ul>
-          <li><a href="mailto:MidnightValetLLC@gmail.com?subject=Pokemon%20Card%20Vending%20Machine%20Request">Request a Machine</a></li>
+          <li><a href="request-machine.html">Request a Machine</a></li>
+          <li><a href="official-rules.html">Official Rules</a></li>
         </ul>
       </div>
     </div>
