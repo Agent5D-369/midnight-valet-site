@@ -1344,6 +1344,34 @@ button { font: inherit; }
   color: #334155;
   font-weight: 700;
 }
+.pitch-strip {
+  background: #0f172a;
+}
+.pitch-strip .card {
+  border-color: rgba(255,203,5,.2);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+}
+.pitch-strip .card h3 {
+  color: var(--mv-yellow);
+}
+.pitch-strip .card p {
+  color: rgba(255,255,255,.82);
+}
+.venue-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.venue-benefits span {
+  padding: 9px 11px;
+  border-radius: 999px;
+  background: rgba(255,203,5,.18);
+  border: 1px solid rgba(42,117,187,.22);
+  color: var(--mv-blue-deep);
+  font-weight: 900;
+  font-size: .88rem;
+}
 .legal-shell {
   max-width: 900px;
   padding: 34px;
